@@ -24,6 +24,7 @@ def get_cuda_bare_metal_version(cuda_dir):
 
 def check_cuda_torch_binary_vs_bare_metal(cuda_dir):
     raw_output, bare_metal_version = get_cuda_bare_metal_version(cuda_dir)
+    print(f'torch.version.cuda: ${torch.version.cuda}')
     torch_binary_version = parse(torch.version.cuda)
 
     print("\nCompiling cuda extensions with")
